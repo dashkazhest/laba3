@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Поворот изображения</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Поворот изображения</h1>
+    <form action="{{ url_for('rotate') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <label for="angle">Угол поворота (в градусах):</label>
+        <input type="number" name="angle" min="-360" max="360" step="1" value="0" required>
+        <div class="g-recaptcha" data-sitekey="{{ sitekey }}"></div>
+        <input type="submit" value="Повернуть">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>

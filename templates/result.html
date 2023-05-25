@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результат</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Результат</h1>
+    <div class="image-container">
+        <h2>Исходное изображение:</h2>
+        <img src="{{ url_for('uploaded_file', filename='orig.png') }}" alt="Исходное изображение">
+    </div>
+    <div class="image-container">
+        <h2>Повернутое изображение:</h2>
+        <img src="{{ url_for('uploaded_file', filename='rotated.png') }}" alt="Повернутое изображение">
+    </div>
+    <div class="plot-container">
+        <h2>Распределение цветов:</h2>
+        <img src="data:image/png;base64,{{ plot }}" alt="График распределения цветов">
+    </div>
+</body>
+</html>
