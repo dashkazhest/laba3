@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024  # Лимит на размер загружаемых файлов (1 МБ)
 UPLOAD_FOLDER = './uploads'  # Папка для загруженных файлов
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-RECAPTCHA_SITE_KEY = '6LcsDD0mAAAAABBTVNKqdZPgVLFGSK_Jrt9HxbgJ'
+RECAPTCHA_SITE_KEY = '6Lcdxj0mAAAAANnD4oSa0nSbrJW9xRjhtBqklmf1'
 
 
 # Маршрут для поворота изображения
@@ -33,7 +33,7 @@ def rotate():
     if not recaptcha_response:
         abort(400, 'Проверка reCAPTCHA не пройдена')
     payload = {
-        'secret': '6LcsDD0mAAAAALXBYTwlLEnfjejQYTID4E3sINKe',
+        'secret': '6Lcdxj0mAAAAAF1rKAAK9KLko8dWHqHQs5b58G9x',
         'response': recaptcha_response
     }
     response = requests.post('https://www.google.com/recaptcha/api/siteverify', payload).json()
