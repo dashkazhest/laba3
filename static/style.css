@@ -2,12 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  text-align: left; 
 }
 
 h1, h2 {
@@ -22,3 +24,17 @@ h1, h2 {
 .error {
   color: red;
 }
+
+input[type="submit"] {
+  background-color: pink; 
+  color: white;
+  border: none;
+  padding: 10px 20px; 
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.g-recaptcha {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
